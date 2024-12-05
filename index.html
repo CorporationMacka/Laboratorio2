@@ -20,22 +20,44 @@
             localStorage.setItem(nombre_tarea, nombre_tarea);
             localStorage.setItem("d" + nombre_tarea, descripcion);
             localStorage.setItem("e" + nombre_tarea, estado_tarea)
-            
-
-
-        }
-
-        function consultarTarea(){
-
-        const nombre_tarea = document.getElementById("nombre_tarea").value;
-        const descripcion  = localStorage.getItem("d"+nombre_tarea);
-        const estado_tarea = localStorage.getItem("e"+nombre_tarea);
-        document.getElementById("descripcion").value = descripcion;
-        document.getElementById("estado_tarea").value =estado_tarea;       
 
 
 
         }
+
+        function consultarTarea() {
+
+            const nombre_tarea = document.getElementById("nombre_tarea").value;
+            const descripcion = localStorage.getItem("d" + nombre_tarea);
+            const estado_tarea = localStorage.getItem("e" + nombre_tarea);
+            document.getElementById("descripcion").value = descripcion;
+            document.getElementById("estado_tarea").value = estado_tarea;
+
+
+
+        }
+
+        function actualizarTarea() {
+
+            const nombre_tarea = document.getElementById("nombre_tarea").value;
+            const descripcion = document.getElementById("descripcion").value;
+            const estado_tarea = document.getElementById("estado_tarea").value;
+            localStorage.setItem(nombre_tarea, nombre_tarea);
+            localStorage.setItem("d" + nombre_tarea, descripcion);
+            localStorage.setItem("e" + nombre_tarea, estado_tarea)
+
+        }
+
+        function eliminarTarea() {
+            const nombre_tarea = document.getElementById("nombre_tarea").value;
+            localStorage.removeItem(nombre_tarea);
+            localStorage.removeItem("d" + nombre_tarea);
+            localStorage.removeItem("e" + nombre_tarea);
+            document.getElementById("descripcion").value = "";
+            document.getElementById("estado_tarea").value = "";
+            alert("Tarea eliminada correctamente.");
+        }
+
 
 
 
