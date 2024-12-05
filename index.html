@@ -18,20 +18,20 @@
             const descripcion = document.getElementById("descripcion").value;
             const estado_tarea = document.getElementById("estado_tarea").value;
             localStorage.setItem(nombre_tarea, nombre_tarea);
-            localStorage.setItem("d" + descripcion, descripcion);
-            localStorage.setItem("e" + estado_tarea, estado_tarea)
-
+            localStorage.setItem("d" + nombre_tarea, descripcion);
+            localStorage.setItem("e" + nombre_tarea, estado_tarea)
+            
 
 
         }
 
-        function consultarTarea() {
+        function consultarTarea(){
 
-            const nombre_tarea = document.getElementById("nombre_tarea").value;
-            const descripcion = document.getitem("d" + nombre_tarea);
-            const estado_tarea = document.getitem("e" + nombre_tarea);
-            document.getElementById("descripcion").value = descripcion;
-            document.getElementById("estado_tarea").value = estado_tarea;
+        const nombre_tarea = document.getElementById("nombre_tarea").value;
+        const descripcion  = localStorage.getItem("d"+nombre_tarea);
+        const estado_tarea = localStorage.getItem("e"+nombre_tarea);
+        document.getElementById("descripcion").value = descripcion;
+        document.getElementById("estado_tarea").value =estado_tarea;       
 
 
 
