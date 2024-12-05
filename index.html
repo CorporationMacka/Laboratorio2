@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario HTML</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <script>
+        function guardarDatos() {
+
+
+            const nombre_tarea = document.getElementById("nombre_tarea").value;
+            const descripcion = document.getElementById("descripcion").value;
+            const estado_tarea = document.getElementById("estado_tarea").value;
+            localStorage.setItem(nombre_tarea, nombre_tarea);
+            localStorage.setItem("d" + descripcion, descripcion);
+            localStorage.setItem("e" + estado_tarea, estado_tarea)
+
+
+        }
+
+    </script>
+
+
+
+    <form onsubmit="guardarDatos(); return false">
+        <fieldset>
+            <legend>Registro de Tareas</legend>
+            <h1>Formulario de Tareas</h1>
+            <hr />
+            <label for="nombre_tarea">Nombre de tarea</label><br />
+            <input type="text" id="nombre_tarea" name="nombre_tarea" placeholder="Escribe tu Tarea"
+                required="true"><br />
+            <label for="descripcion">Descripcion de tarea</label><br />
+            <input type="text" id="descripcion" name="descripcion" placeholder="Escribe la Descripcion"
+                required="true"><br />
+            <label for="estado_tarea">Estado de Tarea</label><br />
+            <input type="text" id="estado_tarea" name="estado_tarea" placeholder="Escribe tu Estado" required="true">
+            <br />
+
+            <input type="submit" value="Enviar">
+            <input type="button" onclick="consultarTarea()" value="Consultar" />
+            <input type="button" onclick="actualizarTarea()" value="Actualizar" />
+            <input type="button" onclick="eliminarTarea()" value="Eliminar" />
+
+
+            
+        </fieldset>
+
+    </form>
+
+</body>
+
+</html>
