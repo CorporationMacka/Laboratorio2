@@ -22,7 +22,22 @@
             localStorage.setItem("e" + estado_tarea, estado_tarea)
 
 
+
         }
+
+        function consultarTarea() {
+
+            const nombre_tarea = document.getElementById("nombre_tarea").value;
+            const descripcion = document.getitem("d" + nombre_tarea);
+            const estado_tarea = document.getitem("e" + nombre_tarea);
+            document.getElementById("descripcion").value = descripcion;
+            document.getElementById("estado_tarea").value = estado_tarea;
+
+
+
+        }
+
+
 
     </script>
 
@@ -49,7 +64,7 @@
             <input type="button" onclick="eliminarTarea()" value="Eliminar" />
 
 
-            
+
         </fieldset>
 
     </form>
