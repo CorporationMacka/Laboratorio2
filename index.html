@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario HTML</title>
     <link rel="stylesheet" href="css/estilos.css">
+    
+    
 </head>
 
 <body>
@@ -49,13 +51,10 @@
         }
 
         function eliminarTarea() {
-            const nombre_tarea = document.getElementById("nombre_tarea").value;
+            const nombre_tarea = document.getElementById("nombre_tarea").value ;
             localStorage.removeItem(nombre_tarea);
-            localStorage.removeItem("d" + nombre_tarea);
-            localStorage.removeItem("e" + nombre_tarea);
-            document.getElementById("descripcion").value = "";
-            document.getElementById("estado_tarea").value = "";
-            alert("Tarea eliminada correctamente.");
+            localStorage.removeItem("d"+nombre_tarea);
+            localStorage.removeItem("e"+nombre_tarea);
         }
 
 
@@ -78,9 +77,9 @@
                 required="true"><br />
             <label for="estado_tarea">Estado de Tarea</label><br />
             <input type="text" id="estado_tarea" name="estado_tarea" placeholder="Escribe tu Estado" required="true">
-            <br />
+            <br><br>
 
-            <input type="submit" value="Enviar">
+            <input type="button" value="Enviar" onclick="guardarDatos()" />
             <input type="button" onclick="consultarTarea()" value="Consultar" />
             <input type="button" onclick="actualizarTarea()" value="Actualizar" />
             <input type="button" onclick="eliminarTarea()" value="Eliminar" />

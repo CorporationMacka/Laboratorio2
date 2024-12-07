@@ -1,6 +1,92 @@
-h1{
-    color: brown;
+
+
+body {
+    background-color: #153149;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+   
+    
+}
+
+
+label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+    color: #c5c5dc; 
+}
+
+form{
+    width: 100%;
+    max-width: 400px;
+    background: #191941; 
+    border: 1px solid #ccc; 
+    border-radius: 10px; 
+    padding: 20px;
+  
 
 
 }
 
+
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+legend {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #00d8ff; 
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+
+    width: 100%;
+    padding:10px;
+    margin-top: 5px;
+    border-radius: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+  
+    
+
+}
+
+input[type="button"] {
+    background-color: #3498db; 
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    margin: 2px;
+    
+}
+
+
+input[type="button"]:hover {
+    background-color: red; 
+}
+
+
+hr {
+    border: none;
+    height: 1px;
+    background: #ccc;
+    margin: 20px 0;
+}
